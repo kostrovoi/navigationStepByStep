@@ -1,0 +1,22 @@
+
+.progress.progress--step-three {
+  height: 4px;
+  width: calc(100% * 3 / 5);
+  background-color: #1b91e3;
+}
+
+.s-three-icon-1 {
+  width: 25px;
+  height: 32px;
+  fill: none;
+}
+
+.s-three-icon-2 {
+  width: 26px;
+  height: 32px;
+  fill: none;
+}
+
+/* .checked-visible {
+  visibility: visible;
+} */

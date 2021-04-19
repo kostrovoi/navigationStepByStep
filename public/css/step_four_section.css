@@ -1,0 +1,32 @@
+
+.progress--step-four {
+  width: calc(100% * 4 / 5);
+}
+
+/* .nav__step-one--step-four {
+  margin-left: 50px;
+} */
+
+.s-four-icon-1 {
+  width: 17px;
+  height: 30px;
+  fill: none;
+}
+
+.s-four-icon-2 {
+  width: 26px;
+  height: 26px;
+  fill: none;
+}
+
+.s-four-icon-3 {
+  width: 26px;
+  height: 26px;
+  fill: none;
+}
+
+@media (max-width: 1350px) {
+  .nav__step-one--step-two {
+    flex-basis: 170px;
+  }
+}

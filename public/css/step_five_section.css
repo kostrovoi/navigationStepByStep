@@ -1,0 +1,255 @@
+
+.progress--step-five {
+  width: calc(100% * 5 / 5);
+}
+
+/*  */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 976px;
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.userContacts {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-bottom: 93px;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  */
+
+.userName {
+  flex-basis: 462px;
+  max-width: 462px;
+  flex-grow: 1;
+}
+
+.contains-placeholder {
+  padding: 10px 0;
+  border: none;
+  appearance: none;
+  border-bottom: 1px solid #c4c4c4;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #333333;
+  opacity: 1;
+}
+
+.contains-placeholder::placeholder {
+  opacity: 1;
+  color: #333333;
+}
+
+.contains-placeholder:hover,
+.contains-placeholder:focus {
+  outline: none;
+  border: none;
+  appearance: none;
+  border-bottom: 1px solid #1b91e3;
+}
+
+/* .contains-placeholder:focus {
+  outline: 1px solid #1b91e3;
+} */
+
+.userTel {
+  flex-basis: 462px;
+  max-width: 462px;
+  flex-grow: 1;
+}
+
+.userDescript {
+  margin-bottom: 80px;
+  flex-grow: 1;
+}
+
+.file-input-wrapper {
+  display: flex;
+  position: relative;
+  margin-bottom: 56px;
+  cursor: pointer;
+}
+
+.custom-file-input {
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  transition: transform 0.1s ease;
+}
+
+.real-file-input:focus + .custom-file-input {
+  border: 1px solid #1b91e3;
+  transform: scale(1.3);
+  transition: transform 0.1s ease;
+}
+
+.file-input-wrapper:hover > .custom-file-input {
+  transform: scale(1.3);
+  transition: transform 0.1s ease;
+}
+
+input[type='file'] {
+  cursor: pointer;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: none;
+  appearance: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.addFile {
+  margin-left: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  cursor: pointer;
+}
+
+.addFile-limit {
+  color: #999;
+}
+
+.agreements-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.agreements-checkbox:focus {
+  outline: 1px solid #1b91e3;
+}
+
+.agreements-link {
+  text-decoration: underline;
+}
+
+.agreements-link:focus {
+  outline: 1px solid #1b91e3;
+}
+
+.agreements-label {
+  margin-left: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.submit {
+  width: 200px;
+  height: 56px;
+  background-color: #1b91e3;
+  border-radius: 3px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.05s ease;
+}
+
+.submit:focus {
+  outline-width: 1px;
+  outline-color: #1b91e3;
+  outline-offset: 2px;
+  /* box-shadow:
+  0 0 0 2px #fff,
+  0 0 0 2px #1b91e3; */
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.submit-span {
+  display: inline-block;
+}
+
+.submit:focus > span,
+.submit:hover > span {
+  transform: scale(1.1) skewX(-20deg);
+  transition: all 0.05s ease;
+}
+
+.nav__step-one--step-five {
+  flex-basis: 214px;
+}
+
+@media (max-width: 1350px) {
+  .nav__step-one--step-five {
+    margin-left: 50px;
+    flex-basis: 130px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .nav-plus-cards__step-5 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .progress-bar--step-5 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .userContacts {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .contains-placeholder {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .userName,
+  .userTel {
+    flex-basis: 0;
+    margin-bottom: 40px;
+  }
+
+  .agreements-wrapper {
+    align-items: flex-start;
+  }
+
+  .agreements-checkbox {
+    flex-shrink: 0;
+  }
+  }

@@ -1,0 +1,62 @@
+.nav-plus-cards__step-2 {
+  justify-content: space-between;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease-out;
+  will-change: transform;
+}
+
+.stepBack > .nav-link:hover > .checked {
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.15s ease-out;
+}
+
+.s-two-icon-1 {
+  width: 32px;
+  height: 29px;
+  fill: none;
+}
+
+.s-two-icon-2 {
+  width: 20px;
+  height: 32px;
+  fill: none;
+}
+
+.nav__step-one--step-two {
+  flex-basis: 214px;
+}
+
+.checked {
+  visibility: hidden;
+  vertical-align: middle;
+  margin-left: -44px;
+  width: 20px;
+  height: 20px;
+}
+
+.checked-visible {
+  visibility: visible;
+}
+
+.nav-link-span {
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* display: inline-block; */
+}
+
+.nav-link:hover > .nav-link-span {
+  transform: scale(1.1) skewX(-20deg);
+  transition: all 0.12s ease-out;
+}
+
+.progress.progress--step-two {
+  height: 4px;
+  width: calc(100% * 2 / 5);
+  background-color: #1b91e3;
+}

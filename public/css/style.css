@@ -1,0 +1,389 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'global.css';
+@import 'step_one_section.css';
+@import 'step_two_section.css';
+@import 'step_three_section.css';
+@import 'step_four_section.css';
+@import 'step_five_section.css';
+
+:root {
+  --inner-fill-step-one-icons: #1b91e3;
+  --inner-stroke-step-one-icons: #1b91e3;
+}
+
+/* overall starts---------------*/
+.btn-reset {
+  padding: 0;
+  border: none;
+  /* background-color: transparent; */
+  cursor: pointer;
+}
+/* overall ends---------------*/
+
+/* components starts---------------- */
+.section {
+  color: #333;
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1440px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.count {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+}
+
+.section__count {
+  margin-bottom: 10px;
+  margin-left: 64px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.title-brief {
+  margin-left: 65px;
+  margin-bottom: 95px;
+}
+
+.title__bold {
+  font-weight: 800;
+}
+
+.brief-wrapper {
+  max-width: 1336px;
+  margin: 0 auto;
+}
+
+.brief-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  counter-reset: section;
+  position: relative;
+  z-index: 10;
+}
+
+.brief-list__item {
+  margin: 12px;
+}
+
+.brief-list__content {
+  padding-left: 32px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  width: 309px;
+  min-height: 304px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-out;
+}
+
+.brief-list__content:hover {
+  background-color: #1b91e3;
+  transition: background-color 0.2s ease-out;
+}
+.brief-list__content:hover span {
+  visibility: hidden;
+}
+
+.brief-list__content:hover:before {
+  content: 'заполнить';
+  position: absolute;
+  padding: 22px 34px;
+  top: 147px;
+  margin-left: 49px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #1b91e3;
+  background-color: #fff;
+  transition: background-color 0.2s ease-out;
+}
+
+.brief-list__content::after {
+  position: absolute;
+  top: 225px;
+  left: 27px;
+  content: '0' counter(section);
+  counter-increment: section;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 104px;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.7;
+  color: #ececec;
+  z-index: -1;
+}
+
+/* svg starts ------------------------------------------------------------ */
+
+.brief-icon-1 {
+  position: absolute;
+  width: 29px;
+  height: 33px;
+  left: 24px;
+  top: 24px;
+  fill: #1b91e3;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-list__content--1:hover .outer-fill-1 {
+  fill: #fff;
+  transform: scale(1.2);
+  transition: 0.15s ease-out;
+}
+
+.brief-icon-2 {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-icon-3 {
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-icon-4 {
+  position: absolute;
+  width: 23px;
+  height: 38px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-icon-5 {
+  position: absolute;
+  width: 23px;
+  height: 33px;
+  left: 24px;
+  top: 24px;
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.outer-2,
+.outer-3,
+.outer-4,
+.outer-5 {
+  /* fill: rgba(255, 255, 255, 0); */
+  fill: none;
+}
+
+.inner-fill-2,
+.inner-fill-3,
+.inner-fill-4,
+.inner-fill-5 {
+  fill: #1b91e3;
+}
+
+.inner-stroke-2 {
+  stroke: #1b91e3;
+}
+
+.brief-list__content--2:hover .brief-icon-2,
+.brief-list__content--3:hover .brief-icon-3,
+.brief-list__content--4:hover .brief-icon-4,
+.brief-list__content--5:hover .brief-icon-5 {
+  transform: scale(1.2);
+  transition: 0.15s ease-out;
+  will-change: transform;
+}
+
+.brief-list__content--2:hover .inner-fill-2,
+.brief-list__content--3:hover .inner-fill-3,
+.brief-list__content--4:hover .inner-fill-4,
+.brief-list__content--5:hover .inner-fill-5 {
+  fill: #fff;
+}
+
+.brief-list__content--2:hover .inner-stroke-2 {
+  stroke: #fff;
+}
+
+/* svg ends----------------------------------------------------------------------- */
+
+.brief-subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #333333;
+  opacity: 0.5;
+}
+
+.brief-list__content--1 .brief-subtitle,
+.brief-list__content--2 .brief-subtitle,
+.brief-list__content--3 .brief-subtitle,
+.brief-list__content--4 .brief-subtitle,
+.brief-list__content--5 .brief-subtitle {
+  display: block;
+  margin-top: 103px;
+  margin-bottom: 34px;
+}
+
+.brief-list__content--1 .brief-title,
+.brief-list__content--2 .brief-title,
+.brief-list__content--3 .brief-title,
+.brief-list__content--4 .brief-title,
+.brief-list__content--5 .brief-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.cta-btn {
+  padding-left: 49px;
+  text-align: left;
+  width: 309px;
+  min-height: 304px;
+  background-color: #1b91e3;
+  transition: background-color 0.2s ease-out;
+}
+
+.cta-btn .brief-subtitle {
+  display: block;
+  position: relative;
+  bottom: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.cta-btn .brief-title {
+  position: relative;
+  top: 15px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.cta-btn:hover {
+  color: #333; /*--------------------------------cascade*/
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-out;
+}
+
+.cta-btn:hover .brief-subtitle,
+.cta-btn:hover .brief-title {
+  color: #333;
+}
+
+/* components ends---------------- */
+
+/* media queries starts ---------------------------------------- */
+
+@media (max-width: 1330px) {
+  .brief-list {
+    justify-content: center;
+  }
+  .wrapper {
+    align-items: center;
+  }
+  .section {
+    padding-top: 20px;
+  }
+  .section__count {
+    margin-left: -965px;
+  }
+  .title-brief {
+    margin-left: -385px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1330px) and (max-width: 1352px) {
+  .brief-list .brief-list__item {
+    margin: 10px;
+  }
+  .brief-list__item .brief-list__content {
+    width: 307px;
+  }
+}
+
+@media (max-width: 1014px) {
+  .section__count {
+    margin-left: -625px;
+  }
+  .title-brief {
+    margin-left: -45px;
+  }
+}
+
+@media (max-width: 682px) {
+  .title-brief {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section__count {
+    margin-left: -305px;
+  }
+  /* .brief-list__item {
+    flex-grow: 1;
+  } */
+}
+
+@media (max-width: 370px) {
+  .section__count {
+    margin-left: 15px;
+    margin-right: auto;
+  }
+
+  .brief-list__item {
+    margin: 12px 0;
+  }
+}
+
+/* media queries ends ---------------------------------------- */
