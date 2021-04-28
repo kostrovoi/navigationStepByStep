@@ -48,7 +48,7 @@ document.addEventListener('click', function (event) {
   console.log(currentIndx);
   let choiceValue = currentLi.getAttribute('data-type');
   let choiceKey = `step${currentIndx}`;
-  // let choice = {};
+  choice = {};
   // choice[choiceKey] = choiceValue;
 
 createObject(choiceKey, choiceValue);
@@ -127,6 +127,8 @@ username.addEventListener('change', function () {
   console.log(username.value);
   let usernameKey = 'username';
   let usernameValue = username.value;
+  choice = {};
+
   createObject(usernameKey, usernameValue);
   orderHistory.push(choice);
   order.push(choice);
@@ -136,6 +138,8 @@ phoneNumber.addEventListener('change', function () {
   console.log(phoneNumber.value);
   let phoneNumberKey = 'phoneNumber';
   let phoneNumberValue = phoneNumber.value;
+  choice = {};
+
   createObject(phoneNumberKey, phoneNumberValue);
   orderHistory.push(choice);
   order.push(choice);
