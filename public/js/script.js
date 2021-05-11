@@ -8,6 +8,11 @@
   const submit = document.querySelector('button.submit');
   const form = document.forms.form;
 
+  const stepsWrapper = document.querySelector('.steps-wrapper');
+  const openModalButtons = document.querySelectorAll('[data-modal-target]');
+  const closeModalButton = document.querySelector('[data-close-button]');
+  const briefSection = document.querySelector('.brief-section');
+
   let username = form.elements.username;
   let phoneNumber = form.elements.phoneNumber;
   let currentIndx = 0;
@@ -15,6 +20,30 @@
   let currentNavItem;
   let orderHistory = [];
   let order = [];
+
+  openModalButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const modal = document.querySelector(button.dataset.modalTarget);
+      openModal(modal);
+    });
+  });
+
+  closeModalButton.addEventListener('click', () => {
+    const modal = closeModalButton.closest('#modal');
+    closeModal(modal);
+  });
+
+  function openModal(modal) {
+    if (modal == null) return;
+    briefSection.classList.add('hide-section');
+    modal.classList.remove('hide-section');
+  }
+
+  function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('hide-section');
+    briefSection.classList.remove('hide-section');
+  }
 
   function createChoiceObject(key, value) {
     choice = {};
@@ -82,7 +111,7 @@
   stepList.forEach((list) => (list.style.display = 'none'));
   stepList[0].style.display = '';
 
-  document.addEventListener('click', function (event) {
+  stepsWrapper.addEventListener('click', function (event) {
     currentLi = event.target.closest('li.brief-list__item');
 
     if (currentLi == null) return;

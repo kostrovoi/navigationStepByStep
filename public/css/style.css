@@ -331,7 +331,7 @@
     align-items: center;
   }
   .section {
-    padding-top: 20px;
+    padding-top: 50px;
   }
   .section__count {
     margin-left: -965px;
@@ -387,3 +387,42 @@
 }
 
 /* media queries ends ---------------------------------------- */
+
+/* switch to modal ==================== */
+.hide-section {
+  display: none;
+}
+
+/* .nav__step-one {
+  position: relative;
+} */
+
+.button-holder {
+  position: fixed;
+  height: 46px;
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: 1480px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  background-color: #1b91e3;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 6px 26px;
+  opacity: 0.8;
+}
+
+/* @media (max-width: 1205px) {
+  .close-modal {
+    margin-top: 40px;
+    margin-left: 660px;
+    margin-right: auto;
+  }
+} */
