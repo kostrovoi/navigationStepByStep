@@ -21,6 +21,37 @@
   let orderHistory = [];
   let order = [];
 
+  let step = 1;
+  changeProgress(step);
+
+  stepList.forEach((list) => (list.style.display = 'none'));
+  stepList[0].style.display = '';
+
+  let resetHistory = function () {
+    orderHistory = [];
+    order = [];
+  };
+
+  let resetSteps = function () {
+    step = 1;
+    changeProgress(step);
+
+    stepList.forEach((list) => (list.style.display = 'none'));
+    stepList[0].style.display = '';
+
+    navItems.forEach((item) => {
+      if (item.classList.contains('stepBack')) {
+        item.classList.remove('stepBack');
+      }
+    });
+
+    navItemChecked.forEach((item) => {
+      if(item.classList.contains('checked-visible')) {
+        item.classList.remove('checked-visible');
+      }
+    });
+  };
+
   openModalButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const modal = document.querySelector(button.dataset.modalTarget);
@@ -31,6 +62,8 @@
   closeModalButton.addEventListener('click', () => {
     const modal = closeModalButton.closest('#modal');
     closeModal(modal);
+    resetHistory();
+    resetSteps();
   });
 
   function openModal(modal) {
@@ -104,12 +137,6 @@
     order.push(choice);
     console.log(order);
   }
-
-  let step = 1;
-  changeProgress(step);
-
-  stepList.forEach((list) => (list.style.display = 'none'));
-  stepList[0].style.display = '';
 
   stepsWrapper.addEventListener('click', function (event) {
     currentLi = event.target.closest('li.brief-list__item');
